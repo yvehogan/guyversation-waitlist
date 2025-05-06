@@ -8,13 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-unageo);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -22,5 +22,53 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-unageo), Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  /* Base UI Colors */
+  /* --background: #fafafb;
+  --foreground: #000000; */
+
+  /* Primary colors */
+  --color-primary-100: #F5F6FF;
+  --color-primary-200: ##F3E9FD;
+  --color-primary-300: #AD66E6;
+  --color-primary-400: #7B20C8;
+
+  /* Secondary colors */
+  --color-secondary-100: #FFF1EC;
+  --color-secondary-200: #FFB199;
+  --color-secondary-300: #3EBFFB;
+  --color-secondary-400: #FB5B3E;
+  --color-secondary-500: #40CE96;
+  --color-secondary-600: #CE4082;
+  --color-secondary-700: #A2F0D6;
+  --color-secondary-800: #EDF9F4;
+
+
+  /* Neutral colors */
+  --color-neutral-100: #2B2B2B;
+  --color-neutral-200: #4D4D4D;
+ 
+
+  /* Grey scale */
+  --color-grey-100: #6a747c;
+  --color-grey-200: #F4F4F4;
+  --color-grey-300: #DADADA;
+  --color-grey-400: #6B6B6B;
+  --color-grey-500: #9E9E9E;
+
+  /* Semantic colors */
+  /* --color-destructive-100: #fb3748;
+  --color-destructive-200: #d00416;
+  --color-warning-10: #cfccbd;
+  --color-warning-100: #ffdb43; */
+  --color-warning-200: #C82020;
+  --color-success-100: #EDF9F4;
+  --color-success-200: #40CE96;
+  /* --color-info-100: #70a2d9;
+  --color-info-200: #3274bd;
+  --color-info-300: #1f4876;
+  --color-info-400: #122a45; */
 }
