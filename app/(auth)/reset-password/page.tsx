@@ -1,12 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
-import { LoginForm } from "./components/auth/login-form";
+import Image from "next/image";
+import { ResetPasswordForm } from "@/app/components/auth/reset-password-form";
 
-export default function Home() {
+export default function ResetPasswordPage() {
   return (
     <main className="flex min-h-screen">
       <div className="flex flex-1 flex-col p-8">
-        <header className="flex items-center justify-between ">
+        <header className="flex items-center justify-between">
           <Image
             src="/svgs/logo.svg"
             alt="Logo"
@@ -14,21 +14,21 @@ export default function Home() {
             height={50}
             className="h-10 w-auto"
           />
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <span className="text-sm text-neutral-100">
-              Don&apos;t Have An Account?
+              Didn&apos;t get an email?
             </span>
             <Link
-              href="/signup"
+              href="/verify-code"
               className="inline-flex h-9 items-center justify-center rounded-full border border-primary-400 px-4 py-2 text-sm text-primary-400 hover:bg-primary-400/10"
             >
-              Sign Up
+              Resend Mail
             </Link>
           </div>
         </header>
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-md">
-            <LoginForm />
+            <ResetPasswordForm />
           </div>
         </div>
       </div>
