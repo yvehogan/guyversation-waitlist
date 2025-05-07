@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { VerifyCodeForm } from "@/app/components/auth/verify-code-form";
+import { VerifyCodeForm } from "@/components/auth/verify-code-form";
 
 export default function VerifyCodePage() {
   return (

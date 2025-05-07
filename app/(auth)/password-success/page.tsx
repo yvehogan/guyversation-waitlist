@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PasswordSuccessContent } from "@/app/components/auth/password-success-content";
+import { PasswordSuccessContent } from "@/components/auth/password-success-content";
 
 export default function PasswordSuccessPage() {
   return (

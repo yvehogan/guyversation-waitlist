@@ -5,6 +5,11 @@ import localFont from "next/font/local";
 const unageo = localFont({
   src: [
     {
+      path: "../public/fonts/Unageo-light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "../public/fonts/Unageo-Regular.ttf",
       weight: "400",
       style: "normal",
