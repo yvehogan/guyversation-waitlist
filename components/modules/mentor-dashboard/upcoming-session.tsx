@@ -14,6 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { JournalDialog } from "./write-journal";
 
 type SessionItem = {
   id: string;
@@ -84,6 +85,14 @@ const sessionItems: SessionItem[] = [
 
 export function UpcomingSessions() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isJournalOpen, setIsJournalOpen] = useState(false);
+  const [journalReason, setJournalReason] = useState("");
+
+  const handleJournalSubmit = () => {
+    console.log("Journal Submitted:", journalReason);
+    setIsJournalOpen(false);
+    setJournalReason("");
+  };
 
   const radioColorSchemes = [
     { bg: "bg-purple-100", icon: "text-purple-700" },
@@ -139,8 +148,9 @@ export function UpcomingSessions() {
                           variant="outline"
                           size="sm"
                           className="mt-2 font-normal text-xs"
+                          onClick={() => setIsJournalOpen(true)}
                         >
-                          Join Meeting
+                          Write a Journal
                         </Button>
                       </div>
                     </div>
@@ -177,6 +187,13 @@ export function UpcomingSessions() {
           </div>
         </CardContent>
       </Card>
+      <JournalDialog
+        open={isJournalOpen}
+        onOpenChange={setIsJournalOpen}
+        reason={journalReason}
+        onReasonChange={setJournalReason}
+        onSubmit={handleJournalSubmit}
+      />
     </>
   );
 }
