@@ -2,9 +2,9 @@ import { Search } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
 
-export function DashboardHeader() {
+export function Appbar() {
   return (
-    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+    <header className="flex justify-between h-38 w-full items-center gap-x-10 px-10 md:h-20 mt-7">
       <div>
         <h1 className="text-4xl font-medium tracking-tight">Welcome back, Magnus!</h1>
         <p className="text-neutral-200 mt-2">Let&apos;s see what&apos;s on your plate today.</p>
@@ -26,6 +26,6 @@ export function DashboardHeader() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   )
 }

@@ -35,7 +35,7 @@ export const Sidebar = () => {
                       : "hover:bg-primary-100/25 text-[#2B2B2B]",
                   )}
                 >
-                  <Icon className={cn("size-8", active ? "text-white" : "text-[#9E9E9E]")} /> {label}
+                  <Icon className={cn("size-7", active ? "text-white" : "text-[#9E9E9E]")} /> {label}
                 </Link>
               );
             })}

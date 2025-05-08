@@ -50,7 +50,6 @@ export function RequestResultDialog({
         </DialogClose>
         {type === "accepted" ? (
           <>
-            <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#FFF1EC]">
               <Image
                 src="/svgs/awesome.svg"
                 width={150}
@@ -58,7 +57,6 @@ export function RequestResultDialog({
                 alt="Confirm Request"
                 className="mx-auto"
               />
-            </div>
 
             <DialogTitle className="mt-4 text-4xl font-medium">
               Awesome!
