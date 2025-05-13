@@ -1,6 +1,6 @@
 "use client"
-
-import { User, MessageSquare } from "lucide-react"
+import { RiQuestionnaireFill } from "react-icons/ri";
+import { IoPerson } from "react-icons/io5";
 
 interface MentorTabsProps {
   activeTab: "mentees" | "requests"
@@ -9,23 +9,23 @@ interface MentorTabsProps {
 
 export function MentorTabs({ activeTab, onTabChange }: MentorTabsProps) {
   return (
-    <div className="flex space-x-4">
+    <div className="inline-flex space-x-4 bg-white p-2 rounded-full">
       <button
-        className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-colors ${
-          activeTab === "mentees" ? "bg-[#F15A29] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        className={`flex items-center gap-2 px-6 py-2 rounded-full text-base font-normal transition-colors cursor-pointer ${
+          activeTab === "mentees" ? "bg-secondary-400 text-white" : "text-neutral-200 hover:bg-gray-50"
         }`}
         onClick={() => onTabChange("mentees")}
       >
-        <User className="h-5 w-5" />
+        <IoPerson className="h-6 w-6" />
         Mentees
       </button>
       <button
-        className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-colors ${
-          activeTab === "requests" ? "bg-[#F15A29] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        className={`flex items-center gap-2 px-6 py-2 rounded-full text-base font-normal transition-colors ${
+          activeTab === "requests" ? "bg-secondary-400 text-white" : "text-neutral-200 hover:bg-gray-50"
         }`}
         onClick={() => onTabChange("requests")}
       >
-        <MessageSquare className="h-5 w-5" />
+        <RiQuestionnaireFill className="h-6 w-6" />
         Requests
       </button>
     </div>

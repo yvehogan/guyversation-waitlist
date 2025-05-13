@@ -46,7 +46,7 @@ export function RequestDetailsDialog({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className="sm:max-w-[450px] overflow-y-auto p-5"
+        className="sm:max-w-[450px] overflow-y-auto"
         style={{
           transform: "translateX(100%)",
           marginTop: "0vh",
@@ -54,7 +54,7 @@ export function RequestDetailsDialog({
           height: "97vh",
         }}
       >
-        <DialogHeader className="relative flex flex-row items-center justify-between border-b pb-14">
+        <DialogHeader className="relative border-b">
           <div className="flex items-center gap-4">
             <Avatar className="h-20 w-20">
               <AvatarImage
@@ -71,9 +71,14 @@ export function RequestDetailsDialog({
               </Badge>
             </div>
           </div>
-          <div className="absolute top-28 left-5 inset-0 items-center">
-            <span className=" text-primary-400">Profile</span>
-            <div className="w-12 border-b border-primary-400"></div>
+
+          <div className="absolute -bottom-[1px] left-0">
+            <div className="relative">
+              <span className="text-primary-400 bg-white px-2 relative z-10">
+                Profile
+              </span>
+              <div className="w-12 h-[1px] bg-primary-400 mt-1"></div>
+            </div>
           </div>
         </DialogHeader>
         <div className="mt-4 space-y-6">

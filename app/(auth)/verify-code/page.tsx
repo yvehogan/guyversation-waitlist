@@ -4,8 +4,7 @@ import { VerifyCodeForm } from "@/components/auth/verify-code-form";
 
 export default function VerifyCodePage() {
   return (
-    <main className="flex min-h-screen">
-      <div className="flex flex-1 flex-col p-8">
+    <>
         <header className="flex items-center justify-between">
           <Image
             src="/svgs/logo.svg"
@@ -31,18 +30,6 @@ export default function VerifyCodePage() {
             <VerifyCodeForm />
           </div>
         </div>
-      </div>
-      <div className="hidden w-1/2 bg-primary- lg:block p-6">
-        <div className=" bg-primary-200 rounded-tr-[45px] rounded-bl-[45px]">
-          <Image
-            src="/svgs/onboarding.svg"
-            alt="Hero Image"
-            width={500}
-            height={500}
-            className=" w-full object-cover"
-          />
-        </div>
-      </div>
-    </main>
+    </>
   );
 }

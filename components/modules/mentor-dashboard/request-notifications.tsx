@@ -70,6 +70,30 @@ const requestItems: RequestItem[] = [
     interests: ["Startups", "Innovation"],
     socials: { linkedin: "john adams", twitter: "jane doe" },
   },
+  {
+    id: "5",
+    name: "Jane Test",
+    age: 16,
+    location: "Abuja, Nigeria",
+    time: "3 hours ago",
+    avatar: "/placeholder.svg?height=40&width=40",
+    goal: "Start a tech company",
+    careerPath: "Entrepreneurship",
+    interests: ["Startups", "Innovation"],
+    socials: { linkedin: "john adams", twitter: "jane doe" },
+  },
+  {
+    id: "6",
+    name: "Jane Testing",
+    age: 16,
+    location: "Abuja, Nigeria",
+    time: "3 hours ago",
+    avatar: "/placeholder.svg?height=40&width=40",
+    goal: "Start a tech company",
+    careerPath: "Entrepreneurship",
+    interests: ["Startups", "Innovation"],
+    socials: { linkedin: "john adams", twitter: "jane doe" },
+  }
 ];
 
 export function RequestNotifications() {
@@ -128,8 +152,8 @@ export function RequestNotifications() {
   };
 
   return (
-    <>
-      <Card className="overflow-hidden">
+    <div className="flex flex-col h-full">
+      <Card className="flex flex-1 overflow-hidden flex-col h-full">
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
             <h3 className="text-xl font-medium">
@@ -141,7 +165,7 @@ export function RequestNotifications() {
             See all
           </Button>
         </CardHeader>
-        <CardContent className="max-h-[300px] overflow-y-auto pr-2 pb-28">
+        <CardContent className="h-[calc(100%-400px)] overflow-y-auto pr-2 pt-2 pb-10">
           <div className="space-y-4">
             {requestItems.map((item) => (
               <div
@@ -217,6 +241,6 @@ export function RequestNotifications() {
           />
         </>
       )}
-    </>
+    </div>
   );
 }

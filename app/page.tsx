@@ -32,14 +32,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="hidden w-1/2 bg-primary- lg:block p-6">
-        <div className=" bg-primary-200 rounded-tr-[45px] rounded-bl-[45px]">
+      <div className="hidden w-1/2 lg:flex lg:p-6">
+        <div className="bg-primary-200 rounded-tr-[45px] rounded-bl-[45px] flex-1 flex items-center justify-center overflow-hidden relative">
           <Image
             src="/svgs/onboarding.svg"
             alt="Hero Image"
-            width={500}
-            height={500}
-            className=" w-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
       </div>

@@ -44,12 +44,11 @@ export default function MentorPage() {
   }
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-8">Mentor</h1>
-
+    <div className="container mx-auto py-6 h-full">
+      <h1 className="text-4xl font-medium mb-4">Mentor</h1>
       <MentorTabs activeTab={activeTab} onTabChange={setActiveTab} />
 
-      <div className="mt-6 bg-white rounded-lg overflow-hidden">
+      <div className="mt-6 bg-white rounded-2xl overflow-hidden">
         {activeTab === "mentees" ? (
           <MenteesList onViewProfile={handleViewMenteeProfile} onChatWithMentee={handleChatWithMentee} />
         ) : (

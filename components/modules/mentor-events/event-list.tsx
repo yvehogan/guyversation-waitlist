@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin } from "lucide-react";
+import { PiMapPinFill } from "react-icons/pi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -172,7 +172,7 @@ export function EventsList() {
   const totalEvents = filteredEvents.length;
 
   return (
-    <div className="bg-white rounded-[30px] p-4  max-h-[500px] h-[500px] overflow-y-auto mb-8">
+    <div className="bg-white rounded-[30px] p-4  h-[calc(100%-50px)] overflow-y-auto mb-8">
       <Tabs
         defaultValue="all"
         onValueChange={(value) => setActiveTab(value as EventType)}
@@ -222,7 +222,7 @@ export function EventsList() {
                 <h3 className="text-xl font-medium my-2">{event.title}</h3>
                 <div className="flex gap-5 items-center">
                 <div className="flex items-center text-gray-500 mb-2">
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <PiMapPinFill className="h-4 w-4 mr-1 text-primary-300" />
                   <span className="text-sm">{event.location}</span>
                 </div>
                 <div className="flex items-center">
@@ -240,7 +240,7 @@ export function EventsList() {
                       </Avatar>
                     ))}
                   </div>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-xs text-black">
                     {event.attendees.count} attendees
                   </span>
                 </div>

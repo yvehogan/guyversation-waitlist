@@ -4,14 +4,16 @@ import { UpcomingSessions } from "@/components/modules/mentor-dashboard/upcoming
 
 export default function DashboardPage() {
   return (
-    <div className="py-6 w-full">
-      <div className="flex flex-col lg:flex-row gap-8">
-        <div className="lg:w-[70%] space-y-4">
+    <div className="py-6 w-full h-full flex flex-col">
+      <div className="flex flex-col lg:flex-row gap-8 flex-1">
+        <div className="lg:w-[70%] space-y-4 flex flex-col">
           <h2 className="text-xl font-medium">Overview</h2>
           <OverviewCards />
-          <RequestNotifications />
+          <div className="flex-1">
+            <RequestNotifications />
+          </div>
         </div>
-        <div className="lg:w-[30%]">
+        <div className="lg:w-[30%] flex flex-col">
           <UpcomingSessions />
         </div>
       </div>

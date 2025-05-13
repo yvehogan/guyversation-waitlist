@@ -30,7 +30,8 @@ export function VerifyCodeForm() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen flex flex-col justify-center py-8 px-4">
+    <div className="space-y-6 max-w-md mx-auto w-full">
       <div className="space-y-2 text-center">
         <div className="inline-flex h-12 w-12 items-center justify-center">
           <Image
@@ -76,6 +77,7 @@ export function VerifyCodeForm() {
           {isLoading ? "Verifying..." : "Continue"}
         </Button>
       </form>
+    </div>
     </div>
   );
 }

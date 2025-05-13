@@ -27,62 +27,64 @@ export function LoginForm() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="space-y-2 text-center">
-        <div className="inline-flex h-12 w-12 items-center justify-center">
-          <Image
-            src="/icons/welcome.png"
-            alt="Logo"
-            width={50}
-            height={50}
-            className="h-10 w-auto"
-          />
+    <div className="min-h-screen flex flex-col justify-center py-8 px-4">
+      <div className="space-y-6 max-w-md mx-auto w-full">
+        <div className="space-y-2 text-center">
+          <div className="inline-flex h-12 w-12 items-center justify-center">
+            <Image
+              src="/icons/welcome.png"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="h-10 w-auto"
+            />
+          </div>
+          <h1 className="text-4xl font-semibold">Welcome back!</h1>
+          <p className="text-grey-400">
+            Please fill the details below to sign into your account.
+          </p>
         </div>
-        <h1 className="text-4xl font-semibold">Welcome back!</h1>
-        <p className="text-grey-400">
-          Please fill the details below to sign into your account.
-        </p>
-      </div>
-      <form onSubmit={handleSubmit} className="space-y-4 mt-16">
-        <div className="space-y-2">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            id="email"
-            placeholder="Enter Your Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="password">Password</Label>
-          <Input
-            id="password"
-            placeholder="Enter Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div className="flex justify-end mb-16">
-          <Link
-            href="/forgot-password"
-            className="text-sm text-[#9333ea] hover:underline"
+        <form onSubmit={handleSubmit} className="space-y-4 mt-16">
+          <div className="space-y-2">
+            <Label htmlFor="email">Email Address</Label>
+            <Input
+              id="email"
+              placeholder="Enter Your Email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="password">Password</Label>
+            <Input
+              id="password"
+              placeholder="Enter Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="flex justify-end mb-16">
+            <Link
+              href="/forgot-password"
+              className="text-sm text-[#9333ea] hover:underline"
+            >
+              Forgot Password?
+            </Link>
+          </div>
+          <Button
+            type="submit"
+            size="lg"
+            className="w-full"
+            disabled={isLoading}
           >
-            Forgot Password?
-          </Link>
-        </div>
-        <Button
-          type="submit"
-          size="lg"
-          className="w-full"
-          disabled={isLoading}
-        >
-          {isLoading ? "Signing In..." : "Sign In"}
-        </Button>
-      </form>
+            {isLoading ? "Signing In..." : "Sign In"}
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }

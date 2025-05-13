@@ -13,8 +13,8 @@
   export const MENTOR_DASHBOARD_LINKS: DashboardLink[] = [
     { label: "Dashboard", href: "/dashboard", icon: MdDashboard },
     { label: "Mentor", href: "/dashboard/mentor", icon: IoPerson },
-    { label: "Communities", href: "/mentor/communities", icon: IoIosPeople },
-    { label: "Notifications", href: "/mentor/notifications", icon: IoNotifications },
+    { label: "Communities", href: "/dashboard/communities", icon: IoIosPeople },
+    { label: "Notifications", href: "/dashboard/notifications", icon: IoNotifications },
     { label: "Events", href: "/dashboard/events", icon: MdEvent },
     { label: "Settings", href: "/mentor/settings", icon: IoSettingsSharp },
   ];
