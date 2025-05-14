@@ -162,7 +162,6 @@ const events: Event[] = [
 
 export function EventsList() {
   const [activeTab, setActiveTab] = useState<EventType>("all");
-  //   const [currentPage, setCurrentPage] = useState(1)
 
   const filteredEvents =
     activeTab === "all"

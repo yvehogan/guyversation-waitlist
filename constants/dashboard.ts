@@ -18,3 +18,26 @@
     { label: "Events", href: "/dashboard/events", icon: MdEvent },
     { label: "Settings", href: "/mentor/settings", icon: IoSettingsSharp },
   ];
+
+  export const ADMIN_DASHBOARD_LINKS = [
+    {
+      label: "Dashboard",
+      href: "/admin/dashboard",
+      icon: MdDashboard,
+    },
+    {
+      label: "User Management",
+      href: "/admin/dashboard/user-management",
+      icon: MdDashboard,
+    },
+    {
+      label: "Community",
+      href: "/admin/dashboard/community",
+      icon: MdDashboard,
+    },
+    {
+      label: "Event Management",
+      href: "/admin/dashboard/event-management",
+      icon: MdDashboard,
+    },
+  ]
