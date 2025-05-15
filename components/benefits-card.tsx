@@ -12,7 +12,6 @@ interface BenefitCardProps {
   description: string
   delay?: number
 }
-console.log("BenefitCardProps", 'cards')
 
 export default function BenefitCard({ icon, title, description, delay = 0 }: BenefitCardProps) {
   const getIcon = () => {
