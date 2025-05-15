@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from 'next/image';
 const FeatureSection = () => {
   return (
@@ -14,13 +13,13 @@ const FeatureSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-[64px] font-medium text-black mb-6">
-              Boys Need Space to Talk. We're Here to Make It Happen.
+              Boys Need Space to Talk. We&apos;re Here to Make It Happen.
             </h2>
             <p className="text-black text-[18px] font-light">
               Too often, boys are taught to stay quiet about their feelings. At
-              Guyversation, we're changing that by creating a space where young
+              Guyversation, we&apos;re changing that by creating a space where young
               guys can speak freely, ask questions, and get guidance from
-              trusted mentors who've been there.
+              trusted mentors who&apos;ve been there.
             </p>
           </motion.div>
           <motion.div

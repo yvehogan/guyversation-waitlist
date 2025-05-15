@@ -1,10 +1,4 @@
 "use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Montserrat } from "next/font/google";
-import { motion } from "framer-motion";
-import BenefitCard from "@/components/benefits-card";
 import HeroSection from "@/components/hero-section";
 import FeatureSection from "@/components/feature-section";
 import BenefitsSection from "@/components/benefits-section";

@@ -3,7 +3,6 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { LuGraduationCap } from "react-icons/lu"
 import { PiHandshakeFill } from "react-icons/pi"
-import { MdOutlineHealthAndSafety } from "react-icons/md"
 import { HiOutlineUserGroup } from "react-icons/hi"
 
 interface BenefitCardProps {
